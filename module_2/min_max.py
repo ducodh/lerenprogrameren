@@ -4,6 +4,12 @@ b = input("vul nog een geheel getal in: ")
 
 if a > b:
     print ("a is het grootste getal")
-    max = a
+    maximum = a
+    print (maximum)
+    
+elif b < a:
+    print ("b is het kleinste getal")
+    minimum = b
+    print (minimum)
 
-print (max)
+
