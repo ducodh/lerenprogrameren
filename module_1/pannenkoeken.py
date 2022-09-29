@@ -7,7 +7,7 @@ boter = 2.5
 
 aantal = int(input("hoeveel pannenkoeken? "))
 
-print ("pannenkoeken " +str(pannenkoeken * aantal ))
+print ("pannenkoeken " + str(pannenkoeken * aantal ))
 print ("eiren " + str(eiren * aantal))
 print ("bloem " + str(bloem * aantal))
 print ("melk " + str(melk * aantal))

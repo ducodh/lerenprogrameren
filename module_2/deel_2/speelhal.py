@@ -1,8 +1,8 @@
 ticket = 7.45
 vip_vr = 0.074
 
-aantal_tickets = float(input ("hoeveel mensen? "))
-aantal_minuten = float(input ("hoelang vr? "))
+aantal_tickets = int(input ("hoeveel mensen? "))
+aantal_minuten = int(input ("hoelang vr? "))
 totaal = ticket * aantal_tickets + vip_vr * aantal_tickets * aantal_minuten
 
 print ("TOTAAL,")

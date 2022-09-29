@@ -37,7 +37,7 @@ keuze_6 = int(input("hoeveel kg weegt u? "))
 if keuze_6 < 90:
     door = door + 1
 keuze_7 = input ("heeft u het certificaat overleven met gevaarlijk personeel? y/n")
-if keuze_7 == ("y"):                   
+if keuze_7 == ("y"):
     if door == 1:
         print ("gefeliciteerd u hebt de baan")
     else:

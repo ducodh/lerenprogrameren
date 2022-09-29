@@ -2,9 +2,9 @@ croissant = 0.39
 stokbrood = 2.78
 kortingsbon = 0.50
 
-aantal_croissant = float(input("hoeveel croisantjes? "))
-aantal_stokbrood = float(input("hoeveel stokbroodjes "))
-aantal_kortingsbon = float(input("hoeveel kortingsbonnen "))
+aantal_croissant = int(input("hoeveel croisantjes? "))
+aantal_stokbrood = int(input("hoeveel stokbroodjes? "))
+aantal_kortingsbon = int(input("hoeveel kortingsbonnen? "))
 totaal = aantal_croissant * croissant + aantal_stokbrood * stokbrood - aantal_kortingsbon * kortingsbon
 
 print (" ")
