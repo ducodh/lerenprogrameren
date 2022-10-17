@@ -1,3 +1,4 @@
+from codecs import namereplace_errors
 import time
 
 print("(=================================)")
@@ -11,21 +12,23 @@ print ("je bent een makelaar met een groote intressen in het oude egypte, je bes
 ready = input(f"ben je er klaar voor {name}? y/n ")
 if ready == "n":
     print(f"oke, {name} jij mag niet meer. ga maar huilen bij mama.")
+    raise NameError("jankbal")
 else: 
     print ("je bent op je zoveelste klus als makelaar bij een oud vrouwtje om de zolder op te knappen. op de zolder heeft zij een oude doos gevonden.")
     doos_hebben = input("ze vraagt, wil jij deze oude doos mee nemen? jij andwoord y/n ")
     if doos_hebben == "n":
         print("je maakt rustig de klus af en gaat door naar de volgende dit is het einde van jou verhaal")
+        raise NameError("watje")
     else:
         print("je neemt de doos mee naar huis en zet hem om de eettafel.")
         open_doos = input ("je vraagt jezelf af of je de doos wel moet openmaken omdat hij zooo oud is. y/n ")
         if open_doos == "n":
-            print("je gaat avondeten maken je buik rammeld je maakt je favorite maaltijd klaar en kan niet wachten om het op te eten je bent zelfs zo enthousiast dat je de doos omstoot!")
+            print("je gaat avondeten maken je buik rammeld je maakt je favorite maaltijd klaar en kan niet wachten om het op te eten je bent zelfs zo enthousiast dat \nje de doos omstoot!")
             time.sleep(3)
         print("je kijkt naar de doos en je schuift wat stof aan de kant het lijkt wel op een kaart! je ziet de symbolen op de kaart en ziet dat het een kaart\nis naar de tombe van cleopatra!")
         naar_egypte = input(f"je vraagt je af of je de kaart moet volgen of niet. wat denk je {name}? y/n ")
         if naar_egypte == "n":
-            print(f"je gaat de volgende dag weer naar het werk voor de laatste finishing touches. je maakt het af en de klant vraag hey, {name} wat heb je eigelijk met de doos gedaan?")
+            print(f"je gaat de volgende dag weer naar het werk voor de laatste finishing touches. \nje maakt het af en de klant vraag hey, {name} wat heb je eigelijk met de doos gedaan?")
             time.sleep(3)
             print("je zecht dat er een kaart in zat die naar de tombe van cleopatra zou lijden. ze vraagt of je hem achter na gaat want ze weet \nhoeveel je van egypte houd.")
             time.sleep(3)
@@ -42,6 +45,7 @@ else:
             print (f"aha {name}, je gaat dus voor de quat\nje krijgt de uitleg van de quat en begind je tocht\nje quat is snel dus je bent er zo")
         elif voertuig == "3":
             print(f"zozo {name}, je gaat voor de style points!\nje begind je tocht maar je kameel is traag dus het word snel nacht\nje zet je tent op en gaat slapen\nje word wakker... maar je bent berooft!\nje probeerd je weg terug te vinden naar het hotel maar tervergeefs\nhier eindigt jou verhaal")
+            raise NameError("dood")
         graaf_boven = input(f"poepoe {name}, je bent eindelijk aangekomen en je ziet 2 mogelijke ingangen\nje kunt via boven of de voorkant uitgraven\n1)boven 2)graven")
         if graaf_boven == "1":
             print("je klimt naar boven en gaat kijken het is een diepe put")
@@ -91,7 +95,8 @@ else:
         print("")
         gang = input("je ziet 2 gangen met vreemde symboolen welke gang kies je? ")
         if gang == "2":
-            print(f"je loopt de gang in... \nje kijkt om je heen en let niet goed op\n dan val je ineens het is een put met hele glade muuren.. je kijkt om je heen en ziet nergens een uitweg... alles wat je ziet zijn de overblijfselen van je voorgangers \nhelaas hier eindigt you verhaal {name}")
+            print(f"je loopt de gang in... \nje kijkt om je heen en let niet goed op\ndan val je ineens het is een put met hele glade muuren.. je kijkt om je heen en ziet nergens een uitweg... alles wat je ziet zijn de overblijfselen van je voorgangers\nhelaas hier eindigt you verhaal {name}")
+            raise NameError("dood")
         else: 
             print("je hebt de goede gang gekozen dit was de koningin van de neil de levensbron van egypte! ")
             print("je loopt verder maar de gang loopt dood?\nzou er ergens een verborgen doorgang zijn?")
