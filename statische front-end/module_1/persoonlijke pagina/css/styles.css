@@ -1,0 +1,20 @@
+body {padding: 20px;
+    margin: 20px;
+}
+
+h1{
+    color: midnightblue;
+    text-align: center;
+}
+h2{
+    color: darkgreen;
+}
+h3{
+    color: darkgreen;
+}
+body{
+    background-color:lightblue ;
+}
+
+a:hover{color: blueviolet}
+nav{margin-bottom: 10px;}
