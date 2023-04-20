@@ -14,7 +14,7 @@ Bovendien is het een leuke hobby, die je veel voldoening en plezier kan geven, a
 als je de reacties van je vrienden en familie ziet, als je ze verrast met je eigen creaties.
 """
 
-ALLOWED_IN_WORD = "0123456789abcdefghijklmnopq rstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
+ALLOWED_IN_WORD = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
 
 # depending on the type of text you wish you get an easy, difficult or text from file.
 def getText(choice: str) -> str:
@@ -50,10 +50,47 @@ def getNumberOfSentences(text: str) -> int:
 def getNumberOfWords(text: str) -> int:
     aantal_woorden = 0
     vorige = ""
+    woord = ""
     for i in text:
-        if i == " " or i == "," or i == ".":
+        if i == " "  or i == ".":
             aantal_woorden += 1
-        elif i == " " and vorige == "," or vorige == ".":
-            aantal_woorden = aantal_woorden
+            woord =""
+        elif vorige == "," or vorige == ".":
+            aantal_woorden -=1
+        else:
+            woord += i
     vorige = i
     return aantal_woorden
+
+# opdracht 4
+def getAVI(text: str) -> str:
+    zinnen = []
+    woorden_nummers = []
+    zin = ""
+    som = 0
+    totaal = 0
+    for i in text:
+        zin+=i
+        if i == "." or i == "!" or i == "?":
+            zinnen.append(zin)
+            zin = ""
+    for i in zinnen:
+        aant_woorden = getNumberOfWords(i)
+        woorden_nummers.append(aant_woorden)
+    for i in woorden_nummers:
+        som += 1
+        totaal+=i
+        gemiddelde = som /totaal
+    if gemiddelde <= 7:
+        avi_score = 5
+    elif gemiddelde == 8:
+        avi_score = 6
+    elif gemiddelde == 9:
+        avi_score = 7
+    elif gemiddelde == 10:
+        avi_score = 8
+    elif gemiddelde == 11:
+        avi_score = 11
+    elif gemiddelde > 11:
+        avi_score = 12
+    return avi_score

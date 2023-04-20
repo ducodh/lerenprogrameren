@@ -28,4 +28,7 @@ if getNumberOfWords(getText('easy1.txt')) == 11:
 else:
     print("Deze test is niet geslaagd")
 
+# test 4: getAVI
+print(getAVI(getText("easy")))
+
 # schrijf zelf nog een extra testen voor getNumberOfWords (gebruik test.txt).
