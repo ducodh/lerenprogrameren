@@ -16,6 +16,12 @@ function shuffle(array) {
     }
   
     return array;
-  }
+}
 
-console.log(lijst)
+for (let i=0; i <20;i++){
+
+const image = document.createElement("img");
+image.src = "images/background.png";
+
+buttons.appendChild(image);
+}
